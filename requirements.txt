@@ -1,0 +1,12 @@
+# Flexible lower bounds instead of exact pins so prebuilt wheels exist for
+# modern Python versions (3.12/3.13). If you need to reproduce a specific
+# environment, use `pip freeze > requirements.lock.txt`.
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+jinja2>=3.1
+python-multipart>=0.0.9
+python-dotenv>=1.0
+pydantic>=2.9
+requests>=2.31
+httpx>=0.27,<1.0
+openpyxl>=3.1

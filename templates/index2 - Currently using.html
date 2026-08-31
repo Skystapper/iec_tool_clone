@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEC 62443 Compliance Checklist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #243342;
+      --muted: #667085;
+      --border: #d9e1e7;
+      --header: #2c3e50;
+      --primary: #3498db;
+      --success: #27ae60;
+      --success-bg: #e8f5e9;
+      --warn-bg: #fff8e1;
+      --warn-border: #f39c12;
+      --danger: #e74c3c;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      padding: 10px;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      background: var(--header);
+      color: white;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .header p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .instructions {
+      margin: 10px 12px 0;
+      padding: 10px 12px;
+      background: var(--warn-bg);
+      border-left: 4px solid var(--warn-border);
+      border-radius: 8px;
+      font-size: 12px;
+      color: #5f5750;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .checklist {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .checklist-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      transition: 0.2s ease;
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .checklist-item:hover {
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+    }
+
+    .checklist-item.active {
+      border-color: var(--primary);
+      background: #f8fcff;
+    }
+
+    .checklist-item.completed {
+      border-color: var(--success);
+      background: var(--success-bg);
+    }
+
+    .item-top {
+      display: grid;
+      grid-template-columns: 20px 1fr auto;
+      gap: 8px;
+      align-items: start;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+
+    .item-title {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.35;
+    }
+
+    .item-id {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      margin-right: 6px;
+    }
+
+    .item-description {
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--muted);
+      min-height: 32px;
+    }
+
+    .status {
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .status-pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .status-analyzing {
+      background: #cce5ff;
+      color: #004085;
+    }
+
+    .status-completed {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .item-actions,
+    .file-list {
+      display: none;
+    }
+
+    .checklist-item.active .item-actions {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .checklist-item.active .file-list.show {
+      display: block;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .file-label,
+    .btn {
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 7px 10px;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .file-label {
+      background: #eef2f5;
+      border: 1px dashed #b9c4cf;
+      color: #344054;
+    }
+
+    .file-label:hover {
+      background: #e4eaef;
+    }
+
+    .file-label.selected {
+      background: #dff3e6;
+      border-color: var(--success);
+      color: #155724;
+    }
+
+    .btn-analyze {
+      background: var(--success);
+      color: white;
+    }
+
+    .btn-analyze:hover:not(:disabled) {
+      background: #229954;
+    }
+
+    .btn-analyze:disabled {
+      background: #a0aab3;
+      cursor: not-allowed;
+    }
+
+    .btn-view {
+      background: var(--primary);
+      color: white;
+      display: none;
+    }
+
+    .btn-view:hover {
+      background: #2d83be;
+    }
+
+    .btn-remove {
+      background: var(--danger);
+      color: white;
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+
+    .file-list {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px;
+      max-height: 75px;
+      overflow: auto;
+    }
+
+    .file-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 6px;
+      align-items: center;
+      background: white;
+      border-left: 3px solid var(--primary);
+      border-radius: 4px;
+      padding: 6px;
+      margin-bottom: 5px;
+      font-size: 11px;
+    }
+
+    .file-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .file-item-name {
+      word-break: break-word;
+    }
+
+    .file-item-size {
+      font-size: 10px;
+      color: #7b8794;
+      white-space: nowrap;
+    }
+
+    .footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, calc(100% - 20px));
+  background: #f4f7f9;
+  border-top: 1px solid var(--border);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 999;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  border-radius: 12px 12px 0 0;
+}
+
+
+    .footer .btn {
+      min-width: 140px;
+    }
+
+    .notification {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      display: none;
+      z-index: 1000;
+      font-size: 12px;
+      max-width: 330px;
+      white-space: pre-line;
+    }
+
+    .notification.success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .notification.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .notification.info {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 6px;
+      }
+
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .checklist-item.active .item-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>✓ IEC 62443 Compliance Checklist</h1>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <span>📄 PDF, DOCX, PPTX, TXT, MD, HTML, EML</span>
+      <span>📦 Max 200 MB per file</span>
+      <span>➕ Up to 10 files per analysis</span>
+      <span>☑ Check item first to enable upload</span>
+      <span>⏳ Do not refresh during analysis</span>
+    </div>
+    <div id="uploadNote" style="text-align:center;color:#6b7280;font-size:12px;margin:-8px 0 12px;"></div>
+
+    <div class="checklist" id="checklist"></div>
+
+    <div class="footer">
+      <button class="btn btn-analyze" onclick="analyzeAll()">📥 Analyze All</button>
+      <button class="btn btn-analyze" onclick="downloadAll()">📥 Download All Reports</button>
+      <!-- <button class="btn btn-view" style="display:inline-block;" onclick="generateSummary()">📊 Generate Summary</button> -->
+    </div>
+  </div>
+
+  <div class="notification" id="notification"></div>
+
+  <script>
+    const requirements = [
+      { id: 'sr-1', title: 'Product Security Context', desc: "Define product's intended use, deployment environment, and security assumptions." },
+      { id: 'sd-2', title: 'Defense in Depth Design', desc: 'Document multiple independent layers of security controls and their interactions.' },
+      { id: 'sm-2', title: 'Identification of Responsibilities', desc: 'Define the roles and responsibilities for security management.' },
+      { id: 'sm-3', title: 'Identification of Applicability', desc: 'Define which security requirements apply to the product, system, or deployment context.' },
+      { id: 'sg', title: 'Security Guidelines', desc: 'Provide security capabilities description and secure-by-default configuration.' },
+      ];
+
+    const state = {};
+    const MAX_FILE_SIZE = 200 * 1024 * 1024; // 200 MB (ABBY Files API limit)
+    const MAX_FILES = 10;
+    const ALLOWED_EXTENSIONS = [
+      'pdf', 'docx', 'pptx', 'txt', 'md', 'html', 'htm', 'css', 'log',
+      'py', 'go', 'cs', 'js', 'jsx', 'ts', 'tsx', 'c', 'java', 'cpp',
+      'hpp', 'h', 'rb', 'php', 'swift', 'kt', 'm', 'mm', 'r', 'sh',
+      'bash', 'yml', 'yaml', 'msg', 'eml'
+    ];
+
+    requirements.forEach(req => {
+      state[req.id] = {
+        checked: false,
+        files: [],
+        analyzed: false,
+        downloadUrl: null
+      };
+    });
+
+    function renderChecklist() {
+      const checklist = document.getElementById('checklist');
+
+      checklist.innerHTML = requirements.map(req => `
+        <div class="checklist-item" id="item-${req.id}">
+          <div class="item-top">
+            <input type="checkbox" id="check-${req.id}" onclick="toggleCheck('${req.id}')">
+            <div class="item-info">
+              <div class="item-title">
+                <span class="item-id">${req.id.toUpperCase()}</span>${req.title}
+              </div>
+            </div>
+            <span class="status status-pending" id="status-${req.id}">Disabled</span>
+          </div>
+
+          <div class="item-description">${req.desc}</div>
+
+          <div class="item-actions">
+            <input type="file" class="file-input" id="file-${req.id}" multiple accept=".pdf,.docx,.pptx,.txt,.md,.html,.htm,.eml,.msg,.py,.js,.ts,.java,.c,.cpp,.yml,.yaml,.log,.css,.sh" onchange="fileSelected('${req.id}')" disabled>
+            <label for="file-${req.id}" class="file-label" id="label-${req.id}">📎 Upload</label>
+            <button class="btn btn-analyze" id="btn-${req.id}" onclick="analyze('${req.id}')" disabled>Analyze</button>
+            <button class="btn btn-view" id="view-${req.id}" onclick="viewReport('${req.id}')">Report</button>
+          </div>
+
+          <div class="file-list" id="file-list-${req.id}"></div>
+        </div>
+      `).join('');
+    }
+
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 B';
+      const k = 1024;
+      const sizes = ['B', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + ' ' + sizes[i];
+    }
+
+    function toggleCheck(id) {
+      const checkbox = document.getElementById(`check-${id}`);
+      const item = document.getElementById(`item-${id}`);
+      const fileInput = document.getElementById(`file-${id}`);
+      const status = document.getElementById(`status-${id}`);
+
+      state[id].checked = checkbox.checked;
+
+      if (checkbox.checked) {
+        item.classList.add('active');
+        fileInput.disabled = false;
+
+        if (!state[id].analyzed) {
+          status.textContent = 'Pending';
+          status.className = 'status status-pending';
+        }
+      } else {
+        item.classList.remove('active');
+        fileInput.disabled = true;
+
+        if (!state[id].analyzed) {
+          status.textContent = 'Disabled';
+          status.className = 'status status-pending';
+        }
+      }
+    }
+
+  function fileSelected(id) {
+    const fileInput = document.getElementById(`file-${id}`);
+    const label = document.getElementById(`label-${id}`);
+    const btn = document.getElementById(`btn-${id}`);
+    const newlySelectedFiles = Array.from(fileInput.files);
+
+    let validNewFiles = [];
+    let invalidMessages = [];
+
+    if (state[id].files.length + newlySelectedFiles.length > MAX_FILES) {
+      showNotification(`You can upload at most ${MAX_FILES} files per analysis.`, 'error');
+      fileInput.value = '';
+      return;
+    }
+
+    newlySelectedFiles.forEach(file => {
+      const extension = file.name.split('.').pop().toLowerCase();
+
+      if (!ALLOWED_EXTENSIONS.includes(extension)) {
+        invalidMessages.push(`${file.name} - unsupported file type (.${extension})`);
+        return;
+      }
+
+      if (file.size > MAX_FILE_SIZE) {
+        invalidMessages.push(`${file.name} - exceeds 200 MB`);
+        return;
+      }
+
+      // prevent duplicate files
+      const alreadyExists = state[id].files.some(existing =>
+        existing.name === file.name &&
+        existing.size === file.size &&
+        existing.lastModified === file.lastModified
+      );
+
+      if (alreadyExists) {
+        invalidMessages.push(`${file.name} - already added`);
+        return;
+      }
+
+      validNewFiles.push(file);
+    });
+
+    // append new files instead of replacing old ones
+    state[id].files = [...state[id].files, ...validNewFiles];
+
+    // rebuild input file list from state
+    const dataTransfer = new DataTransfer();
+    state[id].files.forEach(file => dataTransfer.items.add(file));
+    fileInput.files = dataTransfer.files;
+
+    if (state[id].files.length > 0) {
+      label.textContent = `✓ ${state[id].files.length} selected`;
+      label.classList.add('selected');
+      btn.disabled = false;
+    } else {
+      label.textContent = '📎 Upload';
+      label.classList.remove('selected');
+      btn.disabled = true;
+    }
+
+    displayFileList(id);
+
+    if (invalidMessages.length > 0) {
+      showNotification(`Some files were skipped:\n${invalidMessages.join('\n')}`, 'error');
+    } else if (validNewFiles.length > 0) {
+      showNotification(`${validNewFiles.length} file(s) added to ${id.toUpperCase()}`, 'info');
+    }
+
+    // reset input so same dialog can be used again
+    fileInput.value = '';
+  }
+
+
+    function displayFileList(id) {
+      const fileList = document.getElementById(`file-list-${id}`);
+      fileList.innerHTML = '';
+
+      if (state[id].files.length === 0) {
+        fileList.classList.remove('show');
+        return;
+      }
+
+      state[id].files.forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = `
+          <span class="file-item-name">📄 ${file.name}</span>
+          <span class="file-item-size">${formatFileSize(file.size)}</span>
+          <button class="btn btn-remove" onclick="removeFile('${id}', ${index})">Remove</button>
+        `;
+        fileList.appendChild(fileItem);
+      });
+
+      fileList.classList.add('show');
+    }
+
+    function removeFile(id, index) {
+      state[id].files.splice(index, 1);
+
+      const fileInput = document.getElementById(`file-${id}`);
+      const dataTransfer = new DataTransfer();
+      state[id].files.forEach(file => dataTransfer.items.add(file));
+      fileInput.files = dataTransfer.files;
+
+      const label = document.getElementById(`label-${id}`);
+      const btn = document.getElementById(`btn-${id}`);
+
+      if (state[id].files.length === 0) {
+        label.textContent = '📎 Upload';
+        label.classList.remove('selected');
+        btn.disabled = true;
+      } else {
+        label.textContent = `✓ ${state[id].files.length} selected`;
+      }
+
+      displayFileList(id);
+      showNotification(`File removed from ${id.toUpperCase()}`, 'info');
+    }
+
+    async function analyze(id) {
+      const btn = document.getElementById(`btn-${id}`);
+      const status = document.getElementById(`status-${id}`);
+      const viewBtn = document.getElementById(`view-${id}`);
+
+      if (!state[id].checked) {
+        showNotification('Please check the item first.', 'error');
+        return;
+      }
+
+      if (state[id].files.length === 0) {
+        showNotification('Please select at least one document to analyze.', 'error');
+        return;
+      }
+
+      btn.textContent = 'Analyzing...';
+      btn.disabled = true;
+      status.textContent = 'Analyzing';
+      status.className = 'status status-analyzing';
+
+      try {
+        const formData = new FormData();
+        state[id].files.forEach(file => formData.append('files', file));
+        formData.append('requirement_id', id.toUpperCase());
+
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          state[id].analyzed = true;
+          state[id].downloadUrl = result.download_url;
+
+          status.textContent = 'Completed';
+          status.className = 'status status-completed';
+          btn.style.display = 'none';
+          viewBtn.style.display = 'inline-block';
+
+          const item = document.getElementById(`item-${id}`);
+          item.classList.add('completed');
+
+          showNotification(`${id.toUpperCase()} analysis completed.`, 'success');
+        } else {
+          throw new Error(result.message || 'Unknown error');
+        }
+      } catch (error) {
+        btn.textContent = 'Retry';
+        btn.disabled = false;
+        status.textContent = 'Failed';
+        status.className = 'status status-pending';
+        showNotification(`Analysis failed: ${error.message}`, 'error');
+      }
+    }
+
+    async function viewReport(id) {
+      if (!state[id].downloadUrl) {
+      showNotification('Report not available.', 'error');
+      return;
+      }
+
+      try {
+        const response = await fetch(`${state[id].downloadUrl}?t=${Date.now()}`, {
+        method: 'GET',
+        cache: 'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error('Download failed');
+      }
+
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = `report_${id}.xlsx`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      window.URL.revokeObjectURL(blobUrl);
+
+      showNotification(`Downloading report for ${id.toUpperCase()}...`, 'success');
+    } catch (error) {
+      showNotification(`Download failed: ${error.message}`, 'error');
+    }
+  }
+
+
+    async function analyzeAll() {
+      const pending = requirements
+        .map(r => r.id)
+        .filter(id => state[id].checked && !state[id].analyzed && state[id].files.length > 0);
+
+      if (pending.length === 0) {
+        showNotification('No checked items with files to analyze.', 'error');
+        return;
+      }
+
+      for (const id of pending) {
+        await analyze(id);
+        await new Promise(resolve => setTimeout(resolve, 400));
+      }
+    }
+
+    async function downloadAll() {
+      const completed = requirements
+      .map(r => r.id)
+      .filter(id => state[id].analyzed && state[id].downloadUrl);
+
+      if (completed.length === 0) {
+        showNotification('No reports to download.', 'error');
+        return;
+      }
+
+      for (const id of completed) {
+        try {
+          const response = await fetch(`${state[id].downloadUrl}?t=${Date.now()}`, {
+            method: 'GET',
+            cache: 'no-store'
+          });
+
+          if (!response.ok) {
+          throw new Error(`Failed to download ${id.toUpperCase()}`);
+        }
+
+        const blob = await response.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = `report_${id}.xlsx`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        window.URL.revokeObjectURL(blobUrl);
+
+        await new Promise(resolve => setTimeout(resolve, 700));
+        } catch (error) {
+        showNotification(error.message, 'error');
+      }
+    }
+
+    showNotification(`Downloading ${completed.length} report(s)...`, 'success');
+  }
+
+
+    function generateSummary() {
+      const ids = requirements.map(r => r.id);
+      const checked = ids.filter(id => state[id].checked).length;
+      const completed = ids.filter(id => state[id].analyzed).length;
+      const withFiles = ids.filter(id => state[id].files.length > 0).length;
+      const total = ids.length;
+      const percentage = Math.round((completed / total) * 100);
+
+      const summary = `Compliance Summary
+
+Checked: ${checked}/${total}
+Completed: ${completed}/${total} (${percentage}%)
+Items with files: ${withFiles}/${total}
+
+Requirements:
+${ids.map(id => {
+  let status = state[id].analyzed ? '✓ Completed' : state[id].checked ? '○ Selected' : '- Disabled';
+  let fileInfo = state[id].files.length ? ` (${state[id].files.length} file${state[id].files.length > 1 ? 's' : ''})` : '';
+  return `${id.toUpperCase()}: ${status}${fileInfo}`;
+}).join('\n')}`;
+
+      alert(summary);
+    }
+
+    function showNotification(message, type) {
+      const notification = document.getElementById('notification');
+      notification.innerText = message;
+      notification.className = `notification ${type}`;
+      notification.style.display = 'block';
+
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 3500);
+    }
+
+    renderChecklist();
+  </script>
+</body>
+</html>

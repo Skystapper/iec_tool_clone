@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance Checklist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background: #2c3e50;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .checklist {
+      padding: 30px;
+    }
+
+    .checklist-item {
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .checklist-item:hover {
+      border-color: #3498db;
+    }
+
+    .checklist-item.completed {
+      background: #e8f5e9;
+      border-color: #27ae60;
+    }
+
+    .item-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    input[type="checkbox"] {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .item-id {
+      background: #3498db;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+
+    .item-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .item-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .file-label {
+      padding: 8px 15px;
+      background: #ecf0f1;
+      border: 2px dashed #bdc3c7;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .file-label:hover {
+      background: #bdc3c7;
+    }
+
+    .file-label.selected {
+      background: #d4edda;
+      border-color: #27ae60;
+      color: #155724;
+    }
+
+    .btn {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-analyze {
+      background: #27ae60;
+      color: white;
+    }
+
+    .btn-analyze:hover:not(:disabled) {
+      background: #229954;
+    }
+
+    .btn-analyze:disabled {
+      background: #95a5a6;
+      cursor: not-allowed;
+    }
+
+    .btn-view {
+      background: #3498db;
+      color: white;
+      display: none;
+    }
+
+    .btn-view:hover {
+      background: #2980b9;
+    }
+
+    .btn-remove {
+      background: #e74c3c;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    .btn-remove:hover {
+      background: #c0392b;
+    }
+
+    .status {
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .status-pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .status-analyzing {
+      background: #cce5ff;
+      color: #004085;
+    }
+
+    .status-completed {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .file-list {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .file-list.show {
+      display: block;
+    }
+
+    .file-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      background: white;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      border-left: 3px solid #3498db;
+    }
+
+    .file-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .file-item-name {
+      flex: 1;
+      word-break: break-word;
+      font-size: 13px;
+      color: #2c3e50;
+    }
+
+    .file-item-size {
+      color: #95a5a6;
+      font-size: 12px;
+      margin: 0 10px;
+    }
+
+    .footer {
+      padding: 20px 30px;
+      background: #ecf0f1;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .footer button {
+      padding: 10px 30px;
+      margin: 0 5px;
+    }
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 15px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1000;
+    }
+
+    .notification.success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .notification.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .notification.info {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .header {
+        padding: 20px;
+      }
+
+      .checklist {
+        padding: 15px;
+      }
+
+      .item-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn, .file-label {
+        width: 100%;
+        text-align: center;
+      }
+
+      .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .file-item-size {
+        margin: 5px 0;
+      }
+    }
+    .instructions {
+      margin: 20px 30px 0 30px;
+      padding: 20px;
+      background: #fff8e1;
+      border-left: 5px solid #f39c12;
+      border-radius: 8px;
+    }
+
+    .instructions h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+
+    .instructions ul {
+      padding-left: 20px;
+      color: #555;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>✓ IEC 62443 Compliance Checklist</h1>
+      <p>Security Assessment Dashboard</p>
+    </div>
+
+  <!-- User Instructions -->
+  <div class="instructions">
+    <h3>Instructions for Users</h3>
+    <ul>
+      <li>Upload <strong>.PDF</strong> files only, <strong>max size 10 MB each</strong>, multiple uploads allowed per requirement.</li>
+      <li>Remove unwanted files before clicking <strong>Analyze</strong></li>
+      <li>Do not refresh or close the page while analysis is running.</li>
+    </ul>
+  </div>
+
+
+    <!-- Checklist -->
+    <div class="checklist">
+
+      <!-- Item 1: SR-1 -->
+      <div class="checklist-item" id="item-sr-1">
+        <div class="item-top">
+          <input type="checkbox" id="check-sr-1" onclick="toggleCheck('sr-1')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SR-1</span>
+              Product Security Context
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sr-1">Pending</span>
+        </div>
+        <div class="item-description">
+          Define product's intended use, deployment environment, and security assumptions.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sr-1" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sr-1')">
+          <label for="file-sr-1" class="file-label" id="label-sr-1">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sr-1" onclick="analyze('sr-1')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sr-1" onclick="viewReport('sr-1')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sr-1"></div>
+      </div>
+
+      <!-- Item 2: SD-2 -->
+      <div class="checklist-item" id="item-sd2">
+        <div class="item-top">
+          <input type="checkbox" id="check-sd2" onclick="toggleCheck('sd2')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SD-2</span>
+              Defense in Depth Design
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sd2">Disabled</span>
+        </div>
+        <div class="item-description">
+          Document multiple independent layers of security controls and their interactions.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sd2" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sd2')">
+          <label for="file-sd2" class="file-label" id="label-sd2">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sd2" onclick="analyze('sd2')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sd2" onclick="viewReport('sd2')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sd2"></div>
+      </div>
+
+      <!-- Item 3: SG -->
+      <div class="checklist-item" id="item-sg">
+        <div class="item-top">
+          <input type="checkbox" id="check-sg" onclick="toggleCheck('sg')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SG</span>
+              Security Guidelines
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sg">Pending</span>
+        </div>
+        <div class="item-description">
+          Provide security capabilities description and secure-by-default configuration.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sg" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sg')">
+          <label for="file-sg" class="file-label" id="label-sg">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sg" onclick="analyze('sg')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sg" onclick="viewReport('sg')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sg"></div>
+      </div>
+
+      <!-- Item 4: SM-3 -->
+      <div class="checklist-item" id="item-sm3">
+        <div class="item-top">
+          <input type="checkbox" id="check-sm3" onclick="toggleCheck('sm3')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SM-3</span>
+              Security Management
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sm3">Disabled</span>
+        </div>
+        <div class="item-description">
+          Define security management processes and responsibilities throughout lifecycle.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sm3" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sm3')">
+          <label for="file-sm3" class="file-label" id="label-sm3">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sm3" onclick="analyze('sm3')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sm3" onclick="viewReport('sm3')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sm3"></div>
+      </div>
+
+      <!-- Item 5: SR-2 -->
+      <div class="checklist-item" id="item-sr2">
+        <div class="item-top">
+          <input type="checkbox" id="check-sr2" onclick="toggleCheck('sr2')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SR-2</span>
+              Security Requirements
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sr2">Disabled</span>
+        </div>
+        <div class="item-description">
+          Document specific security requirements and their implementation details.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sr2" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sr2')">
+          <label for="file-sr2" class="file-label" id="label-sr2">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sr2" onclick="analyze('sr2')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sr2" onclick="viewReport('sr2')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sr2"></div>
+      </div>
+      <!-- Item 1: SM-3 -->
+      <div class="checklist-item" id="item-sm-3">
+        <div class="item-top">
+          <input type="checkbox" id="check-sm-3" onclick="toggleCheck('sm-3')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SM-3</span>
+              Identification of Applicability
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sm-3">Pending</span>
+        </div>
+        <div class="item-description">
+          Define which security requirements apply to the product, system, or deployment context.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sm-3" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sm-3')">
+          <label for="file-list-sm3" class="file-label" id="label-sm-2">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sm-3" onclick="analyze('sm-3')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sm-3" onclick="viewReport('sm-3')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sm-3"></div>
+      </div>
+      
+      <!-- Item 1: SM-2 -->
+      <div class="checklist-item" id="item-sm-2">
+        <div class="item-top">
+          <input type="checkbox" id="check-sm-2" onclick="toggleCheck('sm-2')">
+          <div class="item-info">
+            <div class="item-title">
+              <span class="item-id">SM-2</span>
+              Identification of Responsibilites
+            </div>
+          </div>
+          <span class="status status-pending" id="status-sm-2">Pending</span>
+        </div>
+        <div class="item-description">
+          Define the roles and responsibilities for security management.
+        </div>
+        <div class="item-actions">
+          <input type="file" class="file-input" id="file-sm-2" multiple accept=".pdf,.doc,.docx" onchange="fileSelected('sm-2')">
+          <label for="file-sm-2" class="file-label" id="label-sm-2">📎 Upload Files</label>
+          <button class="btn btn-analyze" id="btn-sm-2" onclick="analyze('sm-2')" disabled>Analyze</button>
+          <button class="btn btn-view" id="view-sm-2" onclick="viewReport('sm-2')">Download Report</button>
+        </div>
+        <div class="file-list" id="file-list-sm-2"></div>
+      </div>
+      
+      
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <button class="btn btn-analyze" onclick="analyzeAll()">📥 Analyze All</button>
+      <button class="btn btn-analyze" onclick="downloadAll()">📥 Download All Reports</button>
+      <button class="btn btn-view" onclick="generateSummary()">📊 Generate Summary</button>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification" id="notification"></div>
+
+  <script>
+    // State
+    const items = ['sr-1', 'sd-2', 'sg', 'sm-2', 'sm-3', 'sr-2'];
+    const state = {};
+    const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+    const ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx'];
+
+    items.forEach(id => {
+      state[id] = { checked: false, files: [], analyzed: false, downloadUrl: null };
+    });
+
+    // Helper function to format file size
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+    }
+
+    // Toggle checkbox
+    function toggleCheck(id) {
+      const checkbox = document.getElementById(`check-${id}`);
+      state[id].checked = checkbox.checked;
+      
+      const item = document.getElementById(`item-${id}`);
+      if (checkbox.checked) {
+        item.classList.add('completed');
+      } else {
+        item.classList.remove('completed');
+      }
+    }
+
+    // File selected - handles multiple files
+    function fileSelected(id) {
+      const fileInput = document.getElementById(`file-${id}`);
+      const label = document.getElementById(`label-${id}`);
+      const btn = document.getElementById(`btn-${id}`);
+      const selectedFiles = Array.from(fileInput.files);
+
+      let validFiles = [];
+      let invalidMessages = [];
+
+      selectedFiles.forEach(file => {
+        const extension = file.name.split('.').pop().toLowerCase();
+
+        if (!ALLOWED_EXTENSIONS.includes(extension)) {
+          invalidMessages.push(`${file.name} - invalid file type`);
+          return;
+        }
+
+        if (file.size > MAX_FILE_SIZE) {
+          invalidMessages.push(`${file.name} - exceeds 10 MB`);
+          return;
+        }
+
+        validFiles.push(file);
+      });
+
+      // Update file input with only valid files
+      const dataTransfer = new DataTransfer();
+      validFiles.forEach(file => dataTransfer.items.add(file));
+      fileInput.files = dataTransfer.files;
+
+      state[id].files = validFiles;
+
+      if (validFiles.length > 0) {
+        const fileCount = validFiles.length;
+        label.textContent = `✓ ${fileCount} file${fileCount !== 1 ? 's' : ''} selected`;
+        label.classList.add('selected');
+        btn.disabled = false;
+      } else {
+        label.textContent = '📎 Upload Files';
+        label.classList.remove('selected');
+        btn.disabled = true;
+      }
+
+      displayFileList(id);
+
+      if (invalidMessages.length > 0) {
+        showNotification(`Some files were rejected:\n${invalidMessages.join(', ')}`, 'error');
+      } else if (validFiles.length > 0) {
+        showNotification(`${validFiles.length} file${validFiles.length !== 1 ? 's' : ''} selected for ${id.toUpperCase()}`, 'info');
+      }
+    }
+
+    // Display file list
+    function displayFileList(id) {
+      const fileList = document.getElementById(`file-list-${id}`);
+      fileList.innerHTML = '';
+      
+      if (state[id].files.length === 0) {
+        fileList.classList.remove('show');
+        return;
+      }
+      
+      state[id].files.forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = `
+          <span class="file-item-name">📄 ${file.name}</span>
+          <span class="file-item-size">${formatFileSize(file.size)}</span>
+          <button class="btn btn-remove" onclick="removeFile('${id}', ${index})">Remove</button>
+        `;
+        fileList.appendChild(fileItem);
+      });
+      
+      fileList.classList.add('show');
+    }
+
+    // Remove specific file
+    function removeFile(id, index) {
+      state[id].files.splice(index, 1);
+      
+      // Update file input
+      const fileInput = document.getElementById(`file-${id}`);
+      const dataTransfer = new DataTransfer();
+      state[id].files.forEach(file => {
+        dataTransfer.items.add(file);
+      });
+      fileInput.files = dataTransfer.files;
+      
+      // Update display
+      if (state[id].files.length === 0) {
+        const label = document.getElementById(`label-${id}`);
+        const btn = document.getElementById(`btn-${id}`);
+        label.textContent = '📎 Upload Files';
+        label.classList.remove('selected');
+        btn.disabled = true;
+      } else {
+        const label = document.getElementById(`label-${id}`);
+        const fileCount = state[id].files.length;
+        label.textContent = `✓ ${fileCount} file${fileCount !== 1 ? 's' : ''} selected`;
+      }
+      
+      displayFileList(id);
+      showNotification(`File removed from ${id.toUpperCase()}`, 'info');
+    }
+
+    // Analyze
+    async function analyze(id) {
+      const btn = document.getElementById(`btn-${id}`);
+      const status = document.getElementById(`status-${id}`);
+      const viewBtn = document.getElementById(`view-${id}`);
+      
+      if (state[id].files.length === 0) {
+        showNotification('Please select at least one file first!', 'error');
+        return;
+      }
+      
+      // Start analyzing
+      btn.textContent = 'Analyzing...';
+      btn.disabled = true;
+      status.textContent = 'Analyzing';
+      status.className = 'status status-analyzing';
+      
+      try {
+        // Prepare form data
+        const formData = new FormData();
+        state[id].files.forEach(file => {
+          formData.append('files', file);
+        });
+        formData.append('requirement_id', id.toUpperCase());
+        
+        // Call backend API
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Success
+          state[id].analyzed = true;
+          state[id].downloadUrl = result.download_url;
+          
+          status.textContent = 'Completed';
+          status.className = 'status status-completed';
+          btn.style.display = 'none';
+          viewBtn.style.display = 'inline-block';
+          
+          // Auto-check the checkbox
+          const checkbox = document.getElementById(`check-${id}`);
+          checkbox.checked = true;
+          state[id].checked = true;
+          document.getElementById(`item-${id}`).classList.add('completed');
+          
+          showNotification(`${id.toUpperCase()} analysis completed! Status: ${result.status}`, 'success');
+        } else {
+          throw new Error(result.message);
+        }
+        
+      } catch (error) {
+        btn.textContent = 'Retry';
+        btn.disabled = false;
+        status.textContent = 'Failed';
+        status.className = 'status status-pending';
+        showNotification(`Analysis failed: ${error.message}`, 'error');
+      }
+    }
+
+    // View/Download report
+    function viewReport(id) {
+      if (state[id].downloadUrl) {
+        window.location.href = state[id].downloadUrl;
+        showNotification(`Downloading report for ${id.toUpperCase()}...`, 'success');
+      } else {
+        showNotification('Report not available', 'error');
+      }
+    }
+
+    // Analyze all
+    async function analyzeAll() {
+      const notAnalyzed = items.filter(id => !state[id].analyzed && state[id].files.length > 0);
+      if (notAnalyzed.length === 0) {
+        showNotification('No items with files to analyze', 'error');
+        return;
+      }
+      
+      for (let id of notAnalyzed) {
+        await analyze(id);
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    }
+
+    // Download all
+    function downloadAll() {
+  const completed = items.filter(id => state[id].analyzed);
+  if (completed.length === 0) {
+    showNotification('No reports to download', 'error');
+    return;
+  }
+  
+  completed.forEach((id, index) => {
+    if (state[id].downloadUrl) {
+      setTimeout(() => {
+        // Method 1: Create download link (MORE RELIABLE)
+        const link = document.createElement('a');
+        link.href = state[id].downloadUrl;
+        link.download = `report_${id}.pdf`;
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, index * 800); // Increased delay
+    }
+  });
+  
+  showNotification(`Downloading ${completed.length} report(s)...`, 'success');
+}
+
+
+    // Generate summary
+    function generateSummary() {
+      const completed = items.filter(id => state[id].checked).length;
+      const total = items.length;
+      const withFiles = items.filter(id => state[id].files.length > 0).length;
+      const percentage = Math.round((completed / total) * 100);
+      
+      const summary = `Compliance Summary:\n\nCompleted: ${completed}/${total} (${percentage}%)\nItems with files: ${withFiles}/${total}\n\nRequirements:\n${items.map(id => {
+        let status = state[id].checked ? '✓' : '○';
+        let fileInfo = state[id].files.length > 0 ? ` (${state[id].files.length} file${state[id].files.length !== 1 ? 's' : ''})` : '';
+        return id.toUpperCase() + ': ' + status + fileInfo;
+      }).join('\n')}`;
+      
+      alert(summary);
+    }
+
+    // Show notification
+    function showNotification(message, type) {
+      const notification = document.getElementById('notification');
+      notification.innerText = message;
+      notification.className = `notification ${type}`;
+      notification.style.display = 'block';
+      
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>

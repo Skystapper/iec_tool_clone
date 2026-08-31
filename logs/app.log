@@ -1,0 +1,1175 @@
+2026-08-24 15:37:34 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-24 15:37:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-08-24 15:37:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 422 Unprocessable Entity"
+2026-08-24 15:37:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:37:52 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:37:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:37:52 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:37:52 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:38:18 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:38:18 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:38:18 - app.routes.analyze - WARNING - [analyze.py:74] - Upload validation failed: a.png: images are not accepted by the ABBY Files API. Use the text/document formats (.pdf, .docx, .pptx, .txt, .md, .html, .eml).
+2026-08-24 15:38:18 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:38:18 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:38:18 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:38:18 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:38:18 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:38:18 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 12 file(s)
+2026-08-24 15:38:18 - app.routes.analyze - WARNING - [analyze.py:74] - Upload validation failed: Too many files (12). A maximum of 10 files per analysis is allowed.
+2026-08-24 15:38:18 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:39:32 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:39:32 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:39:33 - app.routes.analyze - INFO - [analyze.py:109] - Analysing 18 requirement(s) across 1 file(s)
+2026-08-24 15:39:33 - app.services.files_service - INFO - [files_service.py:104] - Uploading policy.pdf to ABBY Files API
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c58efe00>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'155')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/files "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.services.files_service - INFO - [files_service.py:120] - Uploaded policy.pdf -> file_id=cc2600b6-c275-497b-85a0-3f6154c3e6c1 (247 bytes)
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42a5bd0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'214')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: GET http://127.0.0.1:8765/api/v1/developers/files?file_id=cc2600b6-c275-497b-85a0-3f6154c3e6c1 "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.services.files_service - INFO - [files_service.py:146] - file_id=cc2600b6-c275-497b-85a0-3f6154c3e6c1 ready (sub_status=none)
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42a7390>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42f16e0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4378 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4378 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42f2fd0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42b79b0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4442 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4291 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42de580>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42debe0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4395 over-estimate
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4408 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42d5f50>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42d6550>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4387 over-estimate
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4459 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42e65d0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c41259a0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4440 over-estimate
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4383 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42af770>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42afe70>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4379 over-estimate
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4388 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42f5160>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c44c3710>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4501 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4341 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c44c3ad0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c4657d80>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4400 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4348 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c42f97b0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c4114b90>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4324 over-estimate
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4331 over-estimate
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:39:33 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f85c4114af0>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'DELETE']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'DELETE']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'DELETE']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:39:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'68')])
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1740] - HTTP Request: DELETE http://127.0.0.1:8765/api/v1/developers/files/cc2600b6-c275-497b-85a0-3f6154c3e6c1 "HTTP/1.0 200 OK"
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'DELETE']>
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:39:33 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:39:33 - app.services.files_service - INFO - [files_service.py:183] - Deleted ABBY file_id=cc2600b6-c275-497b-85a0-3f6154c3e6c1
+2026-08-24 15:39:33 - app.routes.analyze - INFO - [analyze.py:200] - Analysis complete: 18/18 successful
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:39:33 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:39:33 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/api/download/SG "HTTP/1.1 200 OK"
+2026-08-24 15:40:50 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:40:50 - main - INFO - [main.py:38] - ======================================================================
+2026-08-24 15:40:50 - main - INFO - [main.py:39] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-24 15:40:50 - main - INFO - [main.py:40] - ABBY base URL : https://api.abby.abb.com
+2026-08-24 15:40:50 - main - INFO - [main.py:41] - Chat mode     : simple
+2026-08-24 15:40:50 - main - INFO - [main.py:46] - Model         : gpt-5-nano
+2026-08-24 15:40:50 - main - INFO - [main.py:47] - API key       : NOT SET
+2026-08-24 15:40:50 - main - INFO - [main.py:49] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-24 15:40:50 - main - ERROR - [main.py:53] - Configuration problem: ABBY_API_KEY is not set
+2026-08-24 15:40:50 - main - INFO - [main.py:56] - Token bucket  : 90000/90000 available
+2026-08-24 15:40:50 - main - INFO - [main.py:58] - ======================================================================
+2026-08-24 15:41:09 - app.routes.analyze - INFO - [analyze.py:66] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:41:09 - app.routes.analyze - WARNING - [analyze.py:74] - Upload validation failed: x.png: images are not accepted by the ABBY Files API. Use the text/document formats (.pdf, .docx, .pptx, .txt, .md, .html, .eml).
+2026-08-24 15:44:37 - main - INFO - [main.py:60] - Shutting down
+2026-08-24 15:44:45 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:44:45 - app.routes.analyze - INFO - [analyze.py:67] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-24 15:44:45 - app.routes.analyze - INFO - [analyze.py:110] - Analysing 18 requirement(s) across 1 file(s)
+2026-08-24 15:44:45 - app.services.files_service - INFO - [files_service.py:104] - Uploading policy.pdf to ABBY Files API
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f8959af7e00>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'155')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/files "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.services.files_service - INFO - [files_service.py:120] - Uploaded policy.pdf -> file_id=836a6e52-c181-4e58-9cd7-ef2d44967b9a (247 bytes)
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584add10>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'214')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: GET http://127.0.0.1:8765/api/v1/developers/files?file_id=836a6e52-c181-4e58-9cd7-ef2d44967b9a "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.services.files_service - INFO - [files_service.py:146] - file_id=836a6e52-c181-4e58-9cd7-ef2d44967b9a ready (sub_status=none)
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584af4d0>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89583016e0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4379 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4379 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f8958302fd0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584bec30>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4443 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4293 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584e6580>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584e6be0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4396 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4409 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584e1f50>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584e2650>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4388 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4460 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f895832ce60>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f895832da90>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4441 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4384 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584b9ef0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584bb770>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4381 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4389 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89584f94a0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f895830c4d0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4503 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4342 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f895830cf50>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f89583052e0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4401 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4349 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f8958305bd0>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f8958314b90>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'331')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4325 over-estimate
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'330')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://127.0.0.1:8765/api/v1/developers/simple_chat "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.core.rate_limiter - INFO - [rate_limiter.py:138] - Token reconcile: refunded 4333 over-estimate
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='127.0.0.1' port=8765 local_address=None timeout=30 socket_options=None
+2026-08-24 15:44:45 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f8958314730>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'DELETE']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'DELETE']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'DELETE']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.0', 200, b'OK', [(b'Server', b'BaseHTTP/0.6 Python/3.13.14'), (b'Date', b'Mon, 24 Aug 2026 15:44:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'68')])
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1740] - HTTP Request: DELETE http://127.0.0.1:8765/api/v1/developers/files/836a6e52-c181-4e58-9cd7-ef2d44967b9a "HTTP/1.0 200 OK"
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'DELETE']>
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-24 15:44:45 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-24 15:44:45 - app.services.files_service - INFO - [files_service.py:183] - Deleted ABBY file_id=836a6e52-c181-4e58-9cd7-ef2d44967b9a
+2026-08-24 15:44:45 - app.routes.analyze - INFO - [analyze.py:201] - Analysis complete: 18/18 successful
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1025] - HTTP Request: POST http://testserver/api/analyze "HTTP/1.1 200 OK"
+2026-08-24 15:44:45 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:44:45 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/api/download/SG "HTTP/1.1 200 OK"
+2026-08-24 15:44:54 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:44:54 - main - INFO - [main.py:34] - ======================================================================
+2026-08-24 15:44:54 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-24 15:44:54 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-24 15:44:54 - main - INFO - [main.py:37] - Chat mode     : simple
+2026-08-24 15:44:54 - main - INFO - [main.py:42] - Model         : gpt-5-nano
+2026-08-24 15:44:54 - main - INFO - [main.py:43] - API key       : NOT SET
+2026-08-24 15:44:54 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-24 15:44:54 - main - ERROR - [main.py:49] - Configuration problem: ABBY_API_KEY is not set
+2026-08-24 15:44:54 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-24 15:44:54 - main - INFO - [main.py:54] - ======================================================================
+2026-08-24 15:50:24 - main - INFO - [main.py:56] - Shutting down
+2026-08-24 15:50:55 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 15:50:55 - main - INFO - [main.py:34] - ======================================================================
+2026-08-24 15:50:55 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-24 15:50:55 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-24 15:50:55 - main - INFO - [main.py:37] - Chat mode     : simple
+2026-08-24 15:50:55 - main - INFO - [main.py:42] - Model         : gpt-5-nano
+2026-08-24 15:50:55 - main - INFO - [main.py:43] - API key       : NOT SET
+2026-08-24 15:50:55 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-24 15:50:55 - main - ERROR - [main.py:49] - Configuration problem: ABBY_API_KEY is not set
+2026-08-24 15:50:55 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-24 15:50:55 - main - INFO - [main.py:54] - ======================================================================
+2026-08-24 15:52:25 - main - INFO - [main.py:56] - Shutting down
+2026-08-24 16:01:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 16:01:52 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-24 16:01:52 - asyncio - DEBUG - [selector_events.py:64] - Using selector: EpollSelector
+2026-08-24 16:01:52 - httpx - INFO - [_client.py:1025] - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-08-25 09:32:07 - main - INFO - [main.py:34] - ======================================================================
+2026-08-25 09:32:07 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-25 09:32:07 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-25 09:32:07 - main - INFO - [main.py:37] - Chat mode     : simple
+2026-08-25 09:32:07 - main - INFO - [main.py:42] - Model         : gpt-5-nano
+2026-08-25 09:32:07 - main - INFO - [main.py:43] - API key       : set
+2026-08-25 09:32:07 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-25 09:32:07 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-25 09:32:07 - main - INFO - [main.py:54] - ======================================================================
+2026-08-25 09:34:56 - app.routes.analyze - INFO - [analyze.py:67] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-25 09:34:57 - app.routes.analyze - INFO - [analyze.py:110] - Analysing 18 requirement(s) across 1 file(s)
+2026-08-25 09:34:58 - app.services.files_service - INFO - [files_service.py:155] - Uploading 1SDH002289A1002.pdf to ABBY Files API (14.94 MB)
+2026-08-25 09:34:58 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='api.abby.abb.com' port=443 local_address=None timeout=30 socket_options=None
+2026-08-25 09:34:58 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000026AFE1D66D0>
+2026-08-25 09:34:58 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026AFDD86720> server_hostname='api.abby.abb.com' timeout=30
+2026-08-25 09:35:07 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000026AFE24A7D0>
+2026-08-25 09:35:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-25 09:35:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-25 09:35:11 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:11 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'131'), (b'x-process-time', b'2.576494s'), (b'Date', b'Tue, 25 Aug 2026 04:05:11 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:14 - httpx - INFO - [_client.py:1740] - HTTP Request: POST https://api.abby.abb.com/api/v1/developers/files "HTTP/1.1 200 OK"
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:14 - app.services.files_service - INFO - [files_service.py:183] - Uploaded 1SDH002289A1002.pdf -> file_id=42451d71-87e2-43c2-b59c-f587a57d025c (14936628 bytes)
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.042166s'), (b'Date', b'Tue, 25 Aug 2026 04:05:11 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:14 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:14 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:14 - app.services.files_service - INFO - [files_service.py:251] - file_id=42451d71-87e2-43c2-b59c-f587a57d025c status=in_progress sub=reading
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.004619s'), (b'Date', b'Tue, 25 Aug 2026 04:05:15 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:17 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:17 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.005618s'), (b'Date', b'Tue, 25 Aug 2026 04:05:18 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:20 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:20 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:23 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:23 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.005372s'), (b'Date', b'Tue, 25 Aug 2026 04:05:21 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:24 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:24 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.021968s'), (b'Date', b'Tue, 25 Aug 2026 04:05:24 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:27 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:27 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'186'), (b'x-process-time', b'0.035012s'), (b'Date', b'Tue, 25 Aug 2026 04:05:28 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:35:30 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:35:30 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:35:30 - app.services.files_service - INFO - [files_service.py:241] - file_id=42451d71-87e2-43c2-b59c-f587a57d025c ready (sub_status=none)
+2026-08-25 09:35:30 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:30 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:35 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:35 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:40 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:40 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:45 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:45 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:50 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:50 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:55 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:35:55 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:00 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:00 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:05 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:05 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:10 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:15 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:36:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:37:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:38:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:26 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:31 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:36 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:41 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:46 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:51 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:39:56 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:01 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:06 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:11 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:16 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:21 - app.core.rate_limiter - WARNING - [rate_limiter.py:64] - Rate limiter: need 3738536 tokens, have 90000/90000; waiting 2432.4s
+2026-08-25 09:40:24 - httpcore.connection - DEBUG - [_trace.py:87] - close.started
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - close.complete
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='api.abby.abb.com' port=443 local_address=None timeout=30 socket_options=None
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000026AFE1FCB10>
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026AFDD86720> server_hostname='api.abby.abb.com' timeout=30
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000026AFE1FF6D0>
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'DELETE']>
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'DELETE']>
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'DELETE']>
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'65'), (b'x-process-time', b'0.080309s'), (b'Date', b'Tue, 25 Aug 2026 04:10:22 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:40:25 - httpx - INFO - [_client.py:1740] - HTTP Request: DELETE https://api.abby.abb.com/api/v1/developers/files/42451d71-87e2-43c2-b59c-f587a57d025c "HTTP/1.1 200 OK"
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'DELETE']>
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:40:25 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:40:25 - app.services.files_service - INFO - [files_service.py:278] - Deleted ABBY file_id=42451d71-87e2-43c2-b59c-f587a57d025c
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - close.started
+2026-08-25 09:40:25 - httpcore.connection - DEBUG - [_trace.py:87] - close.complete
+2026-08-25 09:49:39 - main - INFO - [main.py:34] - ======================================================================
+2026-08-25 09:49:39 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-25 09:49:39 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-25 09:49:39 - main - INFO - [main.py:37] - Chat mode     : agent
+2026-08-25 09:49:39 - main - INFO - [main.py:39] - Agent ID      : set
+2026-08-25 09:49:39 - main - INFO - [main.py:43] - API key       : set
+2026-08-25 09:49:39 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-25 09:49:39 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-25 09:49:39 - main - INFO - [main.py:54] - ======================================================================
+2026-08-25 09:50:11 - app.routes.analyze - INFO - [analyze.py:88] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-25 09:50:11 - app.routes.analyze - INFO - [analyze.py:131] - Analysing 18 requirement(s) across 1 file(s)
+2026-08-25 09:50:12 - app.services.files_service - INFO - [files_service.py:155] - Uploading 1SDH002289A1002.pdf to ABBY Files API (14.94 MB)
+2026-08-25 09:50:12 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='api.abby.abb.com' port=443 local_address=None timeout=30 socket_options=None
+2026-08-25 09:50:13 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001613683BBD0>
+2026-08-25 09:50:13 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000161367B8A70> server_hostname='api.abby.abb.com' timeout=30
+2026-08-25 09:50:13 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000016136877850>
+2026-08-25 09:50:13 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-25 09:50:13 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:13 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-25 09:50:13 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:13 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'131'), (b'x-process-time', b'2.017337s'), (b'Date', b'Tue, 25 Aug 2026 04:20:13 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:16 - httpx - INFO - [_client.py:1740] - HTTP Request: POST https://api.abby.abb.com/api/v1/developers/files "HTTP/1.1 200 OK"
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:16 - app.services.files_service - INFO - [files_service.py:183] - Uploaded 1SDH002289A1002.pdf -> file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 (14936628 bytes)
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.004404s'), (b'Date', b'Tue, 25 Aug 2026 04:20:13 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:16 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:16 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:16 - app.services.files_service - INFO - [files_service.py:251] - file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 status=in_progress sub=reading
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.006157s'), (b'Date', b'Tue, 25 Aug 2026 04:20:17 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:19 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:19 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:22 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:22 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:22 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:22 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:22 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:23 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.006288s'), (b'Date', b'Tue, 25 Aug 2026 04:20:20 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:23 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:50:23 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:23 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:23 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:23 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.004526s'), (b'Date', b'Tue, 25 Aug 2026 04:20:23 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:26 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:26 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'186'), (b'x-process-time', b'0.004725s'), (b'Date', b'Tue, 25 Aug 2026 04:20:26 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:29 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:29 - app.services.files_service - INFO - [files_service.py:241] - file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252 ready (sub_status=none)
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'102685'), (b'x-process-time', b'0.082056s'), (b'Date', b'Tue, 25 Aug 2026 04:20:27 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:50:29 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files/bc829807-1b2b-4049-b8ad-4ab9c956d252/content?output=markdown "HTTP/1.1 200 OK"
+2026-08-25 09:50:29 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:50:30 - app.routes.analyze - INFO - [analyze.py:172] - 1SDH002289A1002.pdf: extracted markdown ~102206 chars (~25551 tokens)
+2026-08-25 09:50:30 - app.routes.analyze - INFO - [analyze.py:201] - Analysing 1SDH002289A1002.pdf against 18 requirement(s); estimated 42183 tokens
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:50:30 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'9582'), (b'x-process-time', b'49.273664s'), (b'Date', b'Tue, 25 Aug 2026 04:21:17 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:51:19 - httpx - INFO - [_client.py:1740] - HTTP Request: POST https://api.abby.abb.com/api/v1/developers/agent_chat "HTTP/1.1 200 OK"
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'DELETE']>
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'DELETE']>
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 09:51:19 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'DELETE']>
+2026-08-25 09:51:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'65'), (b'x-process-time', b'0.081652s'), (b'Date', b'Tue, 25 Aug 2026 04:21:17 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 09:51:20 - httpx - INFO - [_client.py:1740] - HTTP Request: DELETE https://api.abby.abb.com/api/v1/developers/files/bc829807-1b2b-4049-b8ad-4ab9c956d252 "HTTP/1.1 200 OK"
+2026-08-25 09:51:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'DELETE']>
+2026-08-25 09:51:20 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 09:51:20 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 09:51:20 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 09:51:20 - app.services.files_service - INFO - [files_service.py:296] - Deleted ABBY file_id=bc829807-1b2b-4049-b8ad-4ab9c956d252
+2026-08-25 09:51:20 - httpcore.connection - DEBUG - [_trace.py:87] - close.started
+2026-08-25 09:51:20 - httpcore.connection - DEBUG - [_trace.py:87] - close.complete
+2026-08-25 09:51:20 - app.routes.analyze - INFO - [analyze.py:296] - Analysis complete: 18/18 successful
+2026-08-25 12:14:03 - main - INFO - [main.py:56] - Shutting down
+2026-08-25 12:14:06 - main - INFO - [main.py:34] - ======================================================================
+2026-08-25 12:14:06 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-25 12:14:06 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-25 12:14:06 - main - INFO - [main.py:37] - Chat mode     : agent
+2026-08-25 12:14:06 - main - INFO - [main.py:39] - Agent ID      : set
+2026-08-25 12:14:06 - main - INFO - [main.py:43] - API key       : set
+2026-08-25 12:14:06 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-25 12:14:06 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-25 12:14:06 - main - INFO - [main.py:54] - ======================================================================
+2026-08-25 12:15:03 - main - INFO - [main.py:34] - ======================================================================
+2026-08-25 12:15:03 - main - INFO - [main.py:35] - Starting IEC 62443 Compliance Analysis Tool
+2026-08-25 12:15:03 - main - INFO - [main.py:36] - ABBY base URL : https://api.abby.abb.com
+2026-08-25 12:15:03 - main - INFO - [main.py:37] - Chat mode     : agent
+2026-08-25 12:15:03 - main - INFO - [main.py:39] - Agent ID      : set
+2026-08-25 12:15:03 - main - INFO - [main.py:43] - API key       : set
+2026-08-25 12:15:03 - main - INFO - [main.py:45] - Rate limit    : 100000 tokens/min (safety 90%)
+2026-08-25 12:15:03 - main - INFO - [main.py:52] - Token bucket  : 90000/90000 available
+2026-08-25 12:15:03 - main - INFO - [main.py:54] - ======================================================================
+2026-08-25 12:15:45 - app.routes.analyze - INFO - [analyze.py:89] - Starting analysis for requirement_id=SG, 1 file(s)
+2026-08-25 12:15:45 - app.routes.analyze - INFO - [analyze.py:132] - Analysing 19 requirement(s) across 1 file(s)
+2026-08-25 12:15:46 - app.services.files_service - INFO - [files_service.py:155] - Uploading 1SDH002289A1002.pdf to ABBY Files API (14.94 MB)
+2026-08-25 12:15:46 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.started host='api.abby.abb.com' port=443 local_address=None timeout=30 socket_options=None
+2026-08-25 12:15:46 - httpcore.connection - DEBUG - [_trace.py:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001EC1C3A6750>
+2026-08-25 12:15:46 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001EC1C2DD9A0> server_hostname='api.abby.abb.com' timeout=30
+2026-08-25 12:15:46 - httpcore.connection - DEBUG - [_trace.py:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000001EC1C153110>
+2026-08-25 12:15:46 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-25 12:15:46 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:15:46 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-25 12:15:49 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:15:49 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'131'), (b'x-process-time', b'3.861352s'), (b'Date', b'Tue, 25 Aug 2026 06:45:51 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:15:54 - httpx - INFO - [_client.py:1740] - HTTP Request: POST https://api.abby.abb.com/api/v1/developers/files "HTTP/1.1 200 OK"
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:15:54 - app.services.files_service - INFO - [files_service.py:183] - Uploaded 1SDH002289A1002.pdf -> file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d (14936628 bytes)
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.007784s'), (b'Date', b'Tue, 25 Aug 2026 06:45:51 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:15:54 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:15:54 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:15:54 - app.services.files_service - INFO - [files_service.py:251] - file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d status=in_progress sub=reading
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.006655s'), (b'Date', b'Tue, 25 Aug 2026 06:45:54 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:15:57 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:15:57 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.005909s'), (b'Date', b'Tue, 25 Aug 2026 06:45:58 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:16:00 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:16:00 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:03 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:03 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:03 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:16:03 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:03 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:04 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.014035s'), (b'Date', b'Tue, 25 Aug 2026 06:46:01 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:16:04 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:16:04 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:16:04 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:16:04 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:16:04 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'193'), (b'x-process-time', b'0.005859s'), (b'Date', b'Tue, 25 Aug 2026 06:46:04 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:16:07 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:16:07 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'186'), (b'x-process-time', b'0.005487s'), (b'Date', b'Tue, 25 Aug 2026 06:46:08 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:16:10 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files?file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:10 - app.services.files_service - INFO - [files_service.py:241] - file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d ready (sub_status=none)
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'GET']>
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:10 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'GET']>
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'102685'), (b'x-process-time', b'0.059963s'), (b'Date', b'Tue, 25 Aug 2026 06:46:08 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:16:11 - httpx - INFO - [_client.py:1740] - HTTP Request: GET https://api.abby.abb.com/api/v1/developers/files/d2d3a94b-9162-43cc-894c-c65cc99f6c0d/content?output=markdown "HTTP/1.1 200 OK"
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'GET']>
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:16:11 - app.routes.analyze - INFO - [analyze.py:173] - 1SDH002289A1002.pdf: extracted markdown ~102206 chars (~25551 tokens)
+2026-08-25 12:16:11 - app.routes.analyze - INFO - [analyze.py:202] - Analysing 1SDH002289A1002.pdf against 19 requirement(s); estimated 42897 tokens
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'POST']>
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'POST']>
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:16:11 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'POST']>
+2026-08-25 12:18:08 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'22574'), (b'x-process-time', b'116.277503s'), (b'Date', b'Tue, 25 Aug 2026 06:48:05 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:18:08 - httpx - INFO - [_client.py:1740] - HTTP Request: POST https://api.abby.abb.com/api/v1/developers/agent_chat "HTTP/1.1 200 OK"
+2026-08-25 12:18:08 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'POST']>
+2026-08-25 12:18:08 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:18:08 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.started request=<Request [b'DELETE']>
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_headers.complete
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.started request=<Request [b'DELETE']>
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - send_request_body.complete
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.started request=<Request [b'DELETE']>
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json'), (b'Content-Length', b'65'), (b'x-process-time', b'0.107807s'), (b'Date', b'Tue, 25 Aug 2026 06:48:06 GMT'), (b'Connection', b'keep-alive'), (b'Alt-Svc', b'h3=":443"; ma=93600'), (b'Strict-Transport-Security', b'max-age=15768000 ; includeSubDomains ; preload')])
+2026-08-25 12:18:09 - httpx - INFO - [_client.py:1740] - HTTP Request: DELETE https://api.abby.abb.com/api/v1/developers/files/d2d3a94b-9162-43cc-894c-c65cc99f6c0d "HTTP/1.1 200 OK"
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.started request=<Request [b'DELETE']>
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - receive_response_body.complete
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.started
+2026-08-25 12:18:09 - httpcore.http11 - DEBUG - [_trace.py:87] - response_closed.complete
+2026-08-25 12:18:09 - app.services.files_service - INFO - [files_service.py:296] - Deleted ABBY file_id=d2d3a94b-9162-43cc-894c-c65cc99f6c0d
+2026-08-25 12:18:09 - httpcore.connection - DEBUG - [_trace.py:87] - close.started
+2026-08-25 12:18:09 - httpcore.connection - DEBUG - [_trace.py:87] - close.complete
+2026-08-25 12:18:09 - app.routes.analyze - INFO - [analyze.py:297] - Analysis complete: 19/19 successful
+2026-08-25 12:19:26 - main - INFO - [main.py:56] - Shutting down
+2026-08-25 12:19:45 - main - INFO - [main.py:56] - Shutting down
